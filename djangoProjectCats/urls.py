@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path, re_path
+from rest_framework_swagger.views import get_swagger_view
+
+
+schema_view = get_swagger_view(title='Categories API')
 
 urlpatterns = [
     path('', include('cats.urls')),
-    #path('cats/', include('cats.urls')),
     path('admin/', admin.site.urls),
     re_path(r'^cats/', include('cats.urls')),
-    path('categories/', include('cats.urls')),
+    path('docs/', schema_view),
 ]
 

@@ -11,12 +11,6 @@ router = routers.DefaultRouter()
 router.register(r'category_tree', CategoryTreeViewSet)
 router.register(r'category', CategoryViewSet)
 
-# urlpatterns = [
-#     path('', views.index, name='index'),
-#     #re_path(r'^cats/', views.index),
-#     path('', include(router.urls)),
-# ]
-
 urlpatterns = [
     path('', views.index, name='index'),
     path('', include(router.urls)),
