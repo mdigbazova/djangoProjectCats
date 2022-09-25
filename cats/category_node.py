@@ -3,7 +3,7 @@ class Category:
     Creates category
     """
 
-    def __init__(self, category_id, name, description, image):
+    def __init__(self, category_id, name, description, image, similar_to=None):
         """
         Init method of category
 
@@ -11,11 +11,13 @@ class Category:
         :param name:
         :param description:
         :param image:
+        :param similar_to:
         """
         self.category_id = category_id
         self.name = name
         self.description = description
         self.image = image
+        self.similar_to = similar_to
         self.children = {}
 
     def add_child(self, category_id, name, description, image):
