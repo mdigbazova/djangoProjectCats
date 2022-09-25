@@ -18,8 +18,9 @@ from django.urls import include, path, re_path
 
 urlpatterns = [
     path('', include('cats.urls')),
-    path('cats/', include('cats.urls')),
+    #path('cats/', include('cats.urls')),
     path('admin/', admin.site.urls),
     re_path(r'^cats/', include('cats.urls')),
+    path('categories/', include('cats.urls')),
 ]
 

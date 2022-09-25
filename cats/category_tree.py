@@ -7,9 +7,12 @@ class CategoryTree:
     """
 
     def __init__(self):
+        """
+        Init of Category Tree
+        """
         self.roots = {}
 
-    def add_root(self, category_id, name, description, image):
+    def add_root(self, category_id, name, description, image, similar_to=None):
         """
         Adds roots into the tree
 
@@ -17,6 +20,7 @@ class CategoryTree:
         :param name:
         :param description:
         :param image:
+        :param similar_to:
         :return:
         """
         node = cn.Category(category_id, name, description, image)

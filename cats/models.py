@@ -8,6 +8,7 @@ class CategoryTree(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
+    similar_to = models.CharField(max_length=200)
 
 
 class Category(models.Model):
